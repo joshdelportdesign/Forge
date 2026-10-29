@@ -1,0 +1,16 @@
+.DS_Store
+__pycache__/
+.local/
+*.zip
+generated_images/
+
+# Keep private runtime data and personal exports out of commits
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.ics
+*progress*.json
+*.log
+forge-repository/
