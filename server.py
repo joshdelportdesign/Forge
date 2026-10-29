@@ -23,7 +23,7 @@ PRIVATE.mkdir(mode=0o700, exist_ok=True)
 TOKEN = secrets.token_urlsafe(32)
 LOCK = threading.Lock()
 CALENDAR_LOCK = threading.Lock()
-ASSETS = {'/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js', '/data.js': 'data.js', '/calendar.js': 'calendar.js', '/styles.css': 'styles.css', '/bevel.css':'bevel.css', '/bevel.js':'bevel.js', '/bevel-wander.js':'bevel-wander.js', '/assets/bevel-welcome.png':'assets/bevel-welcome.png', '/assets/bevel-focus.png':'assets/bevel-focus.png', '/assets/bevel-celebrate.png':'assets/bevel-celebrate.png'}
+ASSETS = {'/': 'index.html', '/index.html': 'index.html', '/app.js': 'app.js', '/data.js': 'data.js', '/calendar.js': 'calendar.js', '/styles.css': 'styles.css', '/manifest.webmanifest':'manifest.webmanifest', '/install.js':'install.js', '/install.css':'install.css', '/icons/apple-touch-icon.png':'icons/apple-touch-icon.png', '/icons/icon-192.png':'icons/icon-192.png', '/icons/icon-512.png':'icons/icon-512.png', '/bevel.css':'bevel.css', '/bevel.js':'bevel.js', '/bevel-wander.js':'bevel-wander.js', '/assets/bevel-welcome.png':'assets/bevel-welcome.png', '/assets/bevel-focus.png':'assets/bevel-focus.png', '/assets/bevel-celebrate.png':'assets/bevel-celebrate.png'}
 PROGRESS = PRIVATE / 'progress.json'
 
 def run_bridge(payload):

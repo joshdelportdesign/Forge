@@ -17,16 +17,13 @@ Do not open `index.html` directly: browsers restrict JavaScript module loading f
 
 To stop, press **Control+C** in the Terminal window. If port 8765 is occupied, use `python3 server.py --share --open --port 8766` instead.
 
-## Open it on your phone
+## Add FORGE to your iPhone Home Screen
 
-1. Connect the phone and Mac to the same trusted Wi-Fi; keep the Mac awake.
-2. In FORGE, open **Settings → Take your workshop with you**.
-3. Copy the private phone link and open it in Safari or Chrome on your phone.
-4. You may use Safari’s Share → Add to Home Screen for a convenient shortcut.
+Open **https://joshdelportdesign.github.io/Forge/** in Safari on your iPhone. Tap **Share → Add to Home Screen**, leave **Open as Web App** enabled if shown, then tap **Add**. FORGE has a dedicated Bevel icon and opens in a standalone app-style window. The website shows a dismissible installation guide on iPhone and iPad; you can reopen it from the footer. Dismissing the suggestion hides it for seven days. It is hidden when running as an installed web app.
 
-The link grants access to your shared progress and the Calendar helper. Keep it private. A new server launch generates a new access link. macOS may ask to allow incoming connections. Guest Wi-Fi or a network that isolates devices can prevent phone access.
+The app still needs internet access to load; no service worker or offline cache is included. Installing does not grant Calendar access. Use calendar export on the hosted version.
 
-Phone and desktop share progress through the local helper when opened with their private links. Reload a device to retrieve the latest shared version. Concurrent saves use a revision check: an older device keeps its work locally instead of overwriting newer progress. Export its backup before reloading if that happens.
+For local Mac helper access, connect the phone to the same trusted Wi-Fi as the Mac, keep the Mac awake, and copy the private phone link from **Settings → Take your workshop with you**. Keep that link private. Restarting the helper creates a new access link. Reload a device to retrieve the latest shared progress; export a backup before reloading if a concurrent-save conflict occurs.
 
 ## Connect Apple Calendar
 
@@ -48,6 +45,8 @@ Bevel now wanders around the screen’s edges across all pages. His transparent 
 
 - Hover over him or give him keyboard focus to stop his movement. Click or tap to open his tips; the panel stays put while open. Escape closes it for keyboard users.
 - Choose **A tip, Bevel?** for guidance from the current lesson.
+- Drag Bevel with a mouse or finger to place him anywhere within the visible screen. Dropping him pauses wandering and saves that position. He stays there until **Resume wandering** is selected.
+- Keyboard alternative: focus Bevel and use the arrow keys to place and pin him (Shift moves further). Enter opens his tips.
 - Use **Pause wandering** in his panel or the checkbox in Settings for a persistent pause. Resume is available from the same places.
 - Starting a focus timer changes him to his pencil pose. Tips remain visible while the timer ticks.
 - Completing a new mission triggers a short celebration with the exact XP award; completing a full day includes the 25 XP bonus.
@@ -118,7 +117,10 @@ Official resource links were checked on 29 October 2026. No paid training is req
 | `data.js` | Full curriculum, teaching notes and references |
 | `app.js` | Lessons, timer, rewards, mistakes, progress and navigation |
 | `bevel.js` / `bevel.css` | Companion reactions, contextual tips and responsive styling |
-| `bevel-wander.js` | Viewport movement, hover/focus pause and click/tap tip panel |
+| `bevel-wander.js` | Viewport movement, dragging/pinning, keyboard placement and tip panel |
+| `manifest.webmanifest` | App name, launch URL, scope, display mode and icon declarations |
+| `install.js` / `install.css` | iPhone installation prompt, instructions and standalone detection |
+| `icons/*.png` | Bevel home-screen icons at 180, 192 and 512 pixels |
 | `assets/bevel-*.png` | Three transparent Bevel poses |
 | `calendar.js` | Scheduling and standards-based .ics generation |
 | `server.py` | Optional private local/LAN server, shared progress and native bridge |
@@ -127,3 +129,7 @@ Official resource links were checked on 29 October 2026. No paid training is req
 | `Start_FORGE.command` | One-click Mac launcher |
 
 Independent study software, not an official SOLIDWORKS product or exam question bank.
+
+### Home-screen and placement update
+
+JavaScript syntax checks passed. Fourteen simulated drag checks cover pinning, saved position, hover, tap, click suppression, keyboard placement, cancellation, boundaries and resume. Six installation checks cover iPhone/iPad detection, standalone mode and the seven-day dismissal. The three PNG icon sizes match their declarations. Physical iPhone installation and touch dragging remain unverified.

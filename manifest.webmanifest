@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "FORGE — CSWP Study Companion",
+  "short_name": "FORGE",
+  "description": "Your personal study atlas, with Bevel beside you.",
+  "lang": "en",
+  "start_url": "./#today",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#EDF2F4",
+  "theme_color": "#EDF2F4",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"}
+  ]
+}

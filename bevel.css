@@ -42,3 +42,8 @@
 @media(prefers-reduced-motion:reduce){.bevel-roamer .bevel-image{animation:none!important;transform:none!important}.bevel-roamer{will-change:auto}}
 @media(forced-colors:active){.bevel-roamer{border:0}.bevel-roamer .bevel-speech{border:1px solid CanvasText;box-shadow:none}}
 @media print{.bevel-roamer{display:none!important}}
+
+/* Dragging places Bevel; pointer capture keeps touch and mouse drops reliable. */
+.bevel-roamer .bevel-greeting{touch-action:none;cursor:grab;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.bevel-roamer[data-dragging="true"] .bevel-greeting{cursor:grabbing}
+.bevel-roamer[data-dragging="true"] .bevel-image{animation:none!important;transform:none!important}
