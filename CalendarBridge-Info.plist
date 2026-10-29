@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleIdentifier</key><string>local.forge.cswp.calendar</string>
+<key>CFBundleName</key><string>FORGE Calendar Bridge</string>
+<key>NSCalendarsFullAccessUsageDescription</key><string>FORGE reads busy times to fit your CSWP study sessions around existing events and writes only to your dedicated FORGE study calendar.</string>
+<key>NSCalendarsUsageDescription</key><string>FORGE reads busy times and adds your reviewed CSWP study plan to its own calendar.</string>
+</dict></plist>
