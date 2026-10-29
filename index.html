@@ -46,6 +46,15 @@
     <ol><li>Tap <strong>Share</strong><svg class="install-share-icon" viewBox="0 0 24 26" aria-hidden="true"><path d="M7 10H4v13h16V10h-3M12 16V2m-5 5 5-5 5 5"/></svg>in Safari’s menu or toolbar.</li><li>Choose <strong>Add to Home Screen</strong>. You may need to scroll through the actions or tap <strong>More</strong>.</li><li>Keep <strong>Open as Web App</strong> enabled if shown, then tap <strong>Add</strong>.</li></ol>
     <p class="help-note">FORGE will appear with Bevel’s icon and open in an app-style window. Internet access is needed to load the app; this update does not add offline caching.</p>
   </dialog>
+  <dialog class="install-dialog calendar-help" id="calendar-help" aria-labelledby="calendar-help-title">
+    <div class="install-dialog-header"><span class="mono">YOUR STUDY TIME</span><button class="install-close" id="calendar-help-close" type="button" aria-label="Close calendar instructions" autofocus>×</button></div>
+    <h2 id="calendar-help-title">Add your study sessions.</h2>
+    <p>Export the schedule you reviewed on the Calendar page. Existing calendar conflicts have not been checked.</p>
+    <ol><li>Save any changes to your availability, then download the study calendar below.</li><li>On your Mac, open <strong>Calendar → File → Import</strong> and choose the downloaded <strong>.ics</strong> file.</li><li>Import into a dedicated FORGE calendar in your <strong>iCloud</strong> account to see sessions on your iPhone too.</li></ol>
+    <button class="primary" data-calendar-export type="button">Download study sessions (.ics)</button>
+    <p class="help-note"><strong>On iPhone?</strong> If the downloaded file does not offer an import option, open FORGE on your Mac and follow these steps. Repeated imports may create duplicates.</p>
+    <details><summary>Connect directly on a Mac</summary><p>Run <code>python3 server.py</code> from your local FORGE folder, open the private link printed in Terminal, then connect Apple Calendar there. The local helper checks busy times and adds or updates sessions after review.</p></details>
+  </dialog>
   <noscript>This companion needs JavaScript enabled. Your study work takes place in SOLIDWORKS.</noscript>
 </body>
 </html>
